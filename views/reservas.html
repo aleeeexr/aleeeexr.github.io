@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservas | Oni Daishou &copy;</title>
+  <link rel="stylesheet" href="../styles/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Iansui&family=Reggae+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="social-icons">
+            <a href="https://www.facebook.com"><img src="../images/facebook.png" width="360" height="360" alt="Facebook"> ¡Síguenos aquí! </a>
+            <a href="https://x.com"><img src="../images/x-logo.png" width="350" height="350" alt="X"> ¡Síguenos aquí!</a> 
+            <a href="https://www.instagram.com"><img src="../images/insta-logo.png" width="512" height="512" alt="Instagram"> ¡Síguenos aquí!</a>
+          </div>
+        <div class="logo-title">
+          <img src="../images/logo.png" class="logo" width="1024" height="1024" alt="Logo Oni Daishou">
+        <div class="titulo-texto">
+          <h1 class="titulo">Templo Oni Daishou</h1>
+          <hr class="separador">
+          <h3 class="subtitulo">Desata tu demonio interior</h3>
+        </div>
+        </div>
+        <nav class="menu">
+          <a href="/index.html">Inicio</a>
+          <a href="/views/servicios.html">Servicios</a>
+          <a href="/views/sobrenosotros.html">Sobre nosotros</a>
+          <a href="/views/reservas.html" class="active">Reservas</a>
+          <a href="/views/contacto.html">Contacto</a>
+        </nav>
+       </header>
+        <main class ="reservas-imagen">
+        <div class="reservas-contenido">
+      <h1>Formulario de Reservas</h1>
+      <form action="#exito" method="GET">
+          <label for="nombre">Nombre completo:</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre y apellidos" required
+                   pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{3,50}" 
+                   title="Introduce un nombre válido y apellidos (solo letras y espacios, entre 3 y 50 caracteres)">
+  
+          <label for="email">Correo electrónico:</label>
+          <input type="email" id="email" name="email" placeholder="Ingresa tu correo" required
+                   pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" 
+                   title="Introduce un correo electrónico válido">
+          
+          <label for="telefono">Número de teléfono:</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="Ingresa tu número de teléfono" required 
+                   pattern="[0-9]{9}" 
+                   title="Debe contener 9 dígitos numéricos">
+  
+          <label for="zona">Selecciona la zona:</label>
+          <select id="zona" name="zona" required>
+              <option value="">-- Selecciona una opción --</option>
+              <option value="pro-gaming-zone">Pro Gaming Zone (6,5€/h)</option>
+              <option value="streaming-zone">Streaming Zone (8.00€/h)</option>
+              <option value="console-zone">Console Zone (6€/h)</option>
+              <option value="basic-zone">Basic Zone (3€/h)</option>
+          </select>
+  
+          <label for="fecha">Fecha de la reserva:</label>
+          <input type="date" id="fecha" name="fecha" required>
+  
+          <label for="hora">Hora de la reserva:</label>
+          <input type="time" id="hora" name="hora" required>
+          
+          <label for="horas">Tiempo estimado de la estancia (horas)</label>
+          <input type="number" id="horas" name="horas" min="1" max="24" required>
+          
+          <label for="comentarios">Comentarios adicionales:</label>
+          <textarea id="comentarios" name="comentarios" rows="4" cols="50" placeholder="Escribe tus comentarios aquí" 
+              minlength="10" maxlength="500"
+              title="Mínimo 10 y máximo 500 caracteres"></textarea>
+  
+      <label style="margin-top: 1em; display: block;">
+        <input type="checkbox" id="privacidad" required>
+        Acepto la <a href="politica-privacidad.html" target="_blank">Política de privacidad</a>
+      </label>
+      <button type="submit">Reservar</button>
+      </form>
+    </div>
+    </main>
+    
+  <div id="exito" class="popup-exito">
+        <div class="popup-contenido">
+          <p>¡Reserva realizada con éxito!</p>
+          <a href="#" class="cerrar-popup">Cerrar</a>
+        </div>
+      </div>
+      <footer>
+    <p>&copy; 2025 | Templo Oni Daishou. Todos los derechos reservados.</p>
+    <p>
+      <a href="#">Política de privacidad</a> | 
+      <a href="#">Términos de servicio</a> | 
+    <p>
+      <a href="#">Contacto</a> | 
+      <a href="https://www.instagram.com"><img src="../images/insta-logo.png" width="512" height="512" class="footer-icon" alt="Instagram">Instagram</a> |
+      <a href="https://discord.com"><img src="../images/discord-logo.png" width="512" height="512" class="footer-icon" alt="Discord">Discord</a> |
+      <a href="https://x.com"><img src="../images/x-logo.png" width="512" height="512" class="footer-icon" alt="X">X</a> |
+      <a href="https://www.facebook.com"><img src="../images/facebook.png" width="512" height="512" class="footer-icon" alt="Facebook">Facebook</a> |
+    </p>
+      </footer>
+  </body>
+  </html>
